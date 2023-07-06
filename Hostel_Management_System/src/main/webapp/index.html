@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Image/hostel.png">
+    <title>Hostel_Management_System_Homepage</title>
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="icon" type="image/x-icon" href="Image/hostel.png">
+</head>
+
+<body onload="startTimer()">
+    <div class="loginContainer" id="loginContainer">
+        <header class="navbar" id="navbar">
+        
+           <img src="Image\back_img\logo.png" class="logo" onclick="r5()">
+           <button class="buttonn" id="myBtnn" onclick="adminlog()">Admin_Login</button> 
+            <nav class="navigation">
+                <a href="index.html">Home</a>
+                <a href="">About</a>
+                <a href="">Services</a>
+                <a href="">Contact</a>
+                <button class="buttonloginPop" id="myBtn">Login</button>
+                <a href="registration.html"><button class="button">SIGN UP</button></a>
+            </nav>
+        </header>
+        <!-- main content -->
+        <div class="indexcontainer" id="indexcontainer">
+            <div class="text">
+                <h1>smlicon</h1><br>
+                This is the best collage hostel ever;
+                <br>
+                we provide many facilaties to student
+                <br>
+                they are safe here
+            <br><br><br>
+                <a href="registration.html"><button class="glow-on-hover" type="button">REGISTER_NOW</button></a>
+                
+            </div>
+            <div id="imagearry"></div>
+        </div>
+    </div>
+
+
+<!-- this is to show when login button click -->
+        <div id="formboxLogin">
+            <span class="close">&times;</span>
+            <h1>Login</h1>
+            <form action="loginvefi.jsp" method="post">
+                <div class="inputbox">
+                    <span class="icon"><ion-icon></ion-icon></span>
+                    <input type="text"  name="sic" required autocapitalize="on">
+                    <label>SIC</label>
+                </div>
+                <div class="inputbox">
+                    <span class="icon"><ion-icon ></ion-icon></span>
+                    <input type="password" name="pass" required>
+                    <label>password</label>
+                    <br><br>
+                </div>
+                <div class="rememberMe">
+                    <label><input type="checkbox">
+                        Remember me</label>
+                    <br><br>
+                    <a href="passchange.jsp">Forgot password</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="login_register">
+                    <br>
+                    <p>Need an accomadation ? <a href="registration.html" class="register_link"> Register</a></p>
+                </div>
+            </form>
+        </div>
+        <!-- <header class="navbar" id="navbar1">
+            <img src="Image\back_img\logo.png" class="logo">
+            <nav class="navigation">
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">Services</a>
+                <a href="">Contact</a>
+                <button class="buttonloginPop" id="myBtn">Login</button>
+            </nav>
+        </header> -->
+        <script src="scriptlogin.js"></script>
+        <script>
+        function adminlog(){
+        	window.location.assign("adminlogin.jsp");
+        }
+        function r5(){
+        	window.location.assign("notif.jsp");
+        }
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

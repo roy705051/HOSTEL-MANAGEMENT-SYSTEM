@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Canteen_done</title>
+<style>
+  body{
+    margin-top: 10%;
+  }
+  h1{
+    color:purple
+  }
+.container{
+  margin-left: 25%;
+  margin-right: 25%;
+  padding-bottom: 25px;
+ border: 3px solid rgba(217, 47, 255, 0.519);
+ text-align: center;
+ background-color: rgba(221, 160, 221, 0.604);
+ border-radius:15px;
+ transition: 2s;
+}
+.mybutton {
+    width: 25%;
+    padding: 10px 10px;
+    font-size: 16px;
+    background-color:rgba(124, 156, 59, 0.945);
+    color:#fff;
+    border-radius:12px;
+  }
+  .mybutton:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+</style>
+</head>
+<body onload="time()">
+<div class="container">
+ <h1>CANTEEN REGISTRATION DONE</h1><br>
+ <img src="Image/back_img/thankyou.jpeg" style="width:50%;height:50%">
+  <h3>click to go back</h3>
+<a href="dashboard.jsp"> <button class="mybutton">DashBoard</button></a>
+</div>
+<script> function time(){
+	setTimeout(() => {
+		window.location.assign("dashboard.jsp");
+	},1500);
+}</script>
+</body>
+</html>

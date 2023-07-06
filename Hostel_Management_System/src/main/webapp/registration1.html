@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="icon" type="image/x-icon" href="Image/hostel.png">
+    <link rel="stylesheet" href="styling.css" type="text/css">
+    
+</head>
+<body>
+<div class="main">
+    <div class="register">
+      <span class="close" onclick="cross()">&times;</span>
+        <h1>Registration Form</h1>
+        <form id="register" action="Register.jsp" method="post">
+            <br>
+            <Label>First Name:</Label>
+            &nbsp;
+            <input type="text" id="name" name="fname" placeholder="enter your first name" required autocapitalize="on">
+            &nbsp;&nbsp;&nbsp;
+            <Label>Last Name:</Label>
+            &nbsp;
+            <input type="text" id="name" name="lname" placeholder="enter your last name" required autocapitalize="on">
+            <br><br>
+            <label>Year: </label>
+            &nbsp;
+            <select name="years" id="year">
+                <option>--select--</option>
+                <option value="1st Year">1st Year</option>
+                <option value="2nd Year">2nd Year</option>
+                <option value="3rd Year">3rd Year</option>
+                <option value="4th Year">4th Year</option>
+                <option value="MCA">MCA</option> 
+                </select>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label>SIC No:</label>
+            &nbsp;
+            <input type="text" id="name" name="sic" placeholder="enter your sic number" required autocapitalize="on">
+            <br><br><br>
+            <label>Phone Number:</label>
+            <input type="number" id="name" name="pno" placeholder="enter your phone number" required>
+            &nbsp;&nbsp;&nbsp;
+            <label>Email Address: </label>
+            <input type="email" id="name" name="email" placeholder="enter your email address" required>
+            <br><br>
+            <label>GENDER:</label><br>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <br><br>
+            <label>Father's Name</label>
+            <input type="text" id="pname" name="father" placeholder="enter your father's name" required autocapitalize="on">
+            &nbsp;&nbsp;&nbsp;
+            <label>Mother's Name</label>
+            <input type="text" id="pname" name="mother" placeholder="enter your mother's name" required autocapitalize="on">
+            <br><br>
+            <label>ADDRESS:</label>
+            <br>
+            <label>City: </label>&nbsp;
+            <input type="text" id="name"  name="city" placeholder="enter city" required autocapitalize="on">
+            &nbsp;&nbsp;
+            <label>State: </label>&nbsp;
+            <input type="text" id="name" name="state" placeholder="enter state" required autocapitalize="on">
+            <br><br>
+            <label>Pincode: </label>&nbsp;
+            <input type="text" id="name" name="pin" placeholder="enter pin code" required autocapitalize="on">
+            <br><br><br>
+            <label>Room type: </label><br>
+            <input type="radio" id="ac" name="roomtype" value="Air Condition Room">
+            <label for="ac">Air Condition(AC)</label><br>
+            <input type="radio" id="nonac" name="roomtype" value="NON Air Condition Room">
+            <label for="nonac">Non Air Condition(NON_AC)</label>
+            <br><br>
+            <label>Extra things you want to bring</label>
+            <br>
+            <label class="container">IRON
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              <br>
+              <label class="container">FAN
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              <br>
+              <label class="container">KETTEL
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              <br>
+              <label class="container">OTHER
+                <input type="text" placeholder="others">
+              </label>
+              <br><br><br>
+               <label>Password:</label>
+            &nbsp;
+            <input type="password" id="name" name="password" placeholder="enter your password " required>
+            <br><br><br>
+             <button type="reset"  class="mybutto" value=reset>Reset</button>
+            <button type="submit" id="submit" class="mybutton">Next</button>
+        </form>
+    </div>    
+</div>
+<script>
+function cross(){
+	window.location.assign("dashboard.jsp");
+}
+</script>
+</body>
+</html>

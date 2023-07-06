@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    /*background: #9acd32;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;/*greater stack order is in front of an element with a lower stack order.*/
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("./Image/LoginBg1.jpg"); 
+    background-size: cover;
+    background-position: center;
+}
+
+.navigation a
+{
+    position: relative;
+    font-size: 1.3em;
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left:20px;
+}
+
+.navigation a::after
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.navigation a:hover::after
+{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+
+.navigation .buttonloginPop
+{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid whitesmoke;
+    /*outline: auto;*/
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 0.5s;
+}
+
+.navigation .buttonloginPop:hover
+{
+    background: whitesmoke;
+    color: black;
+}
+
+
+
+
+.inputbox
+{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid black;
+    margin: 30px 0;
+}
+
+.inputbox label
+{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #000000;
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.4s;
+}
+
+.inputbox input:focus~label,
+.inputbox input:valid~label
+{
+    top: -5px;
+}
+
+.inputbox input
+{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #000000;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.inputbox .icon
+{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: black;
+    line-height: 57px;
+}
+
+.rememberMe
+{
+    font-size: 0.9em;
+    color: #000000;
+    font-weight: 500;
+    margin: 0.15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rememberMe label input
+{
+    accent-color: black;
+    margin-right: 3px;
+}
+
+.rememberMe a
+{
+    color: #000000;
+    text-decoration: none;
+}
+
+.rememberMe a :hover
+{
+    text-decoration: underline;
+}
+
+.btn
+{
+    width: 100%;
+    height: 45px;
+    background: #000000;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    color: antiquewhite;
+    font-weight: 500;
+}
+
+
+.login_register p a
+{
+    color: #000000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login_register p a :hover
+{
+    text-decoration: underline;
+}
+
+.close
+{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 45px;
+    height: 45px;
+    background: #000000;
+    font-size: 2em;
+    color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    cursor: pointer;
+    z-index: 1;
+} 
+
+#formboxLogin {
+    position: relative;
+    margin:10px;
+    padding: 10px;
+    border: 2px solid #888;
+    width:30%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.8s;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height:50%;
+  }
+  #formboxLogin h1{
+    text-align: center;
+    font-style: bold;
+  }
+  
+  
+  /* Add Animation */
+  @keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }
+
+  * {
+    margin:0px; padding:0px;
+    box-sizing:border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   }
+  
+  .logo{
+    margin-left: 10px;
+    width:6%;
+    height:2%;
+    border-radius: 10px;
+  }
+  img.logo:hover{
+    width:6.2%;
+    height:2.5%;
+  
+  }
+  
+ .indexcontainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+ }
+
+#imagearry{
+  width:50%;
+  margin-left: 150px;
+  border:2px solid #48ff00;
+  border-radius: 10px;
+  position: relative;
+}
+#imagearry img{
+  width: 100%;
+  border-radius: 10px;
+}
+.text
+{
+  font-size:25px;
+  width:500px;
+  margin-left: 15px;
+  
+}
+
+/*SOME HARD DESIGN FOR BUTTON  USE THIS  HTML CLASS-->glow-on-hover */
+.glow-on-hover {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: rgba(0, 243, 101, 0.892);
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background:rgba(0, 69, 243, 0.67);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+.button{
+	width: 115px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid whitesmoke;
+    /*outline: auto;*/
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    color: white;
+    font-weight: 500;
+    margin-left:5px;
+    transition: 0.5s;
+}
+
+.button:hover {
+   background: whitesmoke;
+    color: black;
+}
+.buttonn{
+	width: 115px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid whitesmoke;
+    /*outline: auto;*/
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    color: white;
+    font-weight: 500;
+    margin-left:5px;
+    transition: 0.5s;
+    margin-right: 230px;
+}
+
+.buttonn:hover {
+   background: whitesmoke;
+    color: black;
+}
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
